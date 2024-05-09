@@ -13,7 +13,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddReCaptcha(builder.Configuration.GetSection("ReCaptcha"));
 
 
-//builder.Services.AddTransient<IEmailSender, clsEmailConfirm>();
+builder.Services.AddTransient<IEmailSender, clsEmailConfirm>();
 
 builder.Services.AddScoped<ICategoriesService , CategoriesService>();
 builder.Services.AddScoped<IGamesService , GamesService>();
